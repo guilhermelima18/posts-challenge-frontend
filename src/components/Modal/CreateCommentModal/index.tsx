@@ -1,4 +1,3 @@
-import { useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import { XIcon } from "lucide-react";
 import { yupResolver } from "@hookform/resolvers/yup";
@@ -14,8 +13,8 @@ export const CreateCommentModal = ({
   getPostCommentsLoading,
   registerPostCommentsLoading,
   onCreateComment,
+  onModalClose,
 }: CreateCommentModalProps) => {
-  const navigate = useNavigate();
   const {
     control,
     handleSubmit,
@@ -25,12 +24,8 @@ export const CreateCommentModal = ({
     mode: "onChange",
   });
 
-  const handleRedirectHomeURL = () => {
-    navigate("/");
-  };
-
   return (
-    <div className="bg-main w-full min-h-screen fixed top-0 left-0 flex items-center justify-center">
+    <div className="bg-main w-full min-h-screen fixed top-0 left-0 flex items-center justify-center p-2">
       <main className="bg-slate-100 w-[600px] flex flex-col p-5 rounded-lg relative">
         {getPostCommentsLoading ? (
           <div className="w-full flex items-center justify-center my-10">
@@ -41,7 +36,7 @@ export const CreateCommentModal = ({
               height={40}
             />
           </div>
-        ) : comments.length ? (
+        ) : comments!.length ? (
           <section className="h-[200px] flex flex-col gap-5 overflow-y-scroll mt-5 mb-10">
             {comments?.map((comment) => (
               <CommentCard
@@ -58,10 +53,7 @@ export const CreateCommentModal = ({
 
         <h1 className="text-2xl text-gray-600">Cadastrar novo comentário</h1>
 
-        <button
-          className="absolute top-2 right-2"
-          onClick={handleRedirectHomeURL}
-        >
+        <button className="absolute top-2 right-2" onClick={onModalClose}>
           <XIcon />
         </button>
 

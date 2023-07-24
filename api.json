@@ -169,12 +169,6 @@
       "body": "odit magnam ut saepe sed non qui\ntempora atque nihil\naccusamus illum doloribus illo dolor\neligendi repudiandae odit magni similique sed cum maiores"
     },
     {
-      "userId": 3,
-      "id": 30,
-      "title": "a quo magni similique perferendis",
-      "body": "alias dolor cumque\nimpedit blanditiis non eveniet odio maxime\nblanditiis amet eius quis tempora quia autem rem\na provident perspiciatis quia"
-    },
-    {
       "userId": 4,
       "id": 31,
       "title": "ullam ut quidem id aut vel consequuntur",
@@ -529,12 +523,6 @@
       "body": "repellat aut aperiam totam temporibus autem et\narchitecto magnam ut\nconsequatur qui cupiditate rerum quia soluta dignissimos nihil iure\ntempore quas est"
     },
     {
-      "userId": 9,
-      "id": 90,
-      "title": "ad iusto omnis odit dolor voluptatibus",
-      "body": "minus omnis soluta quia\nqui sed adipisci voluptates illum ipsam voluptatem\neligendi officia ut in\neos soluta similique molestias praesentium blanditiis"
-    },
-    {
       "userId": 10,
       "id": 91,
       "title": "aut amet sed",
@@ -593,43 +581,37 @@
       "id": 100,
       "title": "at nam consequatur ea labore ea harum",
       "body": "cupiditate quo est a modi nesciunt soluta\nipsa voluptas error itaque dicta in\nautem qui minus magnam et distinctio eum\naccusamus ratione error aut"
+    },
+    {
+      "title": "aa",
+      "body": "Post de teste",
+      "id": 101
+    },
+    {
+      "title": "aaa",
+      "body": "Outro post teste",
+      "id": 102
+    },
+    {
+      "title": "A um novo POST aqui!!!!",
+      "body": "Testando a criação de posts...",
+      "id": 103
     }
   ],
   "comments": [
     {
-      "postId": 30,
+      "postId": 101,
+      "name": "Ricardo",
+      "email": "ricardo@hotmail.com",
+      "body": "Vamos fazer um teste!!!!",
+      "id": 15
+    },
+    {
+      "postId": 103,
       "name": "Guilherme Lima",
       "email": "guilhermelima18@hotmail.com",
-      "body": "Novo comentário na publicação!!!",
-      "id": 8
-    },
-    {
-      "postId": 30,
-      "name": "Jéssica Urniani",
-      "email": "jessicaurniani777@gmail.com",
-      "body": "Novo comentário na publicação 2!!!",
-      "id": 9
-    },
-    {
-      "postId": 30,
-      "name": "Rodrigo Silva",
-      "email": "rodrigo@hotmail.com",
-      "body": "Comentário...",
-      "id": 10
-    },
-    {
-      "postId": 30,
-      "name": "Alexandre Silva",
-      "email": "alexandre@hotmail.com",
-      "body": "Comentário 2...",
-      "id": 11
-    },
-    {
-      "postId": 30,
-      "name": "Adriano Lima",
-      "email": "adriano@hotmail.com",
-      "body": "Comentário 3...",
-      "id": 12
+      "body": "Novo comentário no post!!!",
+      "id": 16
     }
   ]
 }

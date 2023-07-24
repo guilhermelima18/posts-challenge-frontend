@@ -9,7 +9,8 @@ export type CreateComment = {
 
 export type CreateCommentModalProps = {
   comments: Comment[];
-  onCreateComment: (data: any) => void;
   getPostCommentsLoading: boolean;
   registerPostCommentsLoading: boolean;
+  onCreateComment: (data: any) => void;
+  onModalClose: () => void;
 };

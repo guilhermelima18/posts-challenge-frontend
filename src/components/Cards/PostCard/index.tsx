@@ -1,19 +1,29 @@
-import { Link } from "react-router-dom";
+import { Trash, ScrollText } from "lucide-react";
 import { PostCardProps } from "./types";
 
-export const PostCard = ({ post }: PostCardProps) => {
+export const PostCard = ({
+  post,
+  handleOpenModalCommentsView,
+  handleOpenModalPostDelete,
+}: PostCardProps) => {
   return (
-    <div className="w-[600px] flex flex-col gap-2 p-5 border border-gray-400 rounded-lg">
+    <div className="w-full flex flex-col gap-2 p-5 border border-gray-400 rounded-lg">
       <h1 className="text-gray-300 text-xl">{post.title}</h1>
       <p className="text-gray-400 text-sm">{post.body}</p>
       <div className="flex items-center justify-between mt-10">
-        <Link
-          className="w-36 text-pink-400 text-sm"
-          to={`/comments/${post.id}`}
+        <button
+          className="w-52 text-pink-400 text-sm flex items-center gap-2"
+          onClick={() => handleOpenModalCommentsView(post.id)}
         >
+          <ScrollText size={20} />
           Visualizar comentários
-        </Link>
-        <button className="w-36 text-pink-400 text-sm">Excluir postagem</button>
+        </button>
+        <button
+          className="text-pink-400 text-sm"
+          onClick={() => handleOpenModalPostDelete(post.id)}
+        >
+          <Trash size={20} />
+        </button>
       </div>
     </div>
   );
